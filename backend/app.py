@@ -108,5 +108,8 @@ Also, if the user provided factual personal details that should be remembered (n
     chat_rows = [{"role": r["role"], "text": r["text"], "created_at": r["created_at"]} for r in rows]
     return render_template("chat.html", chat=chat_rows, memory=get_memory(USER_ID))
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
