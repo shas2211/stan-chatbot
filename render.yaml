@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nova-chatbot
+    env: python
+    region: oregon
+    plan: free
+
+    buildCommand: "./backend/install.sh"
+    startCommand: "python backend/app.py"
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false

@@ -1,0 +1,19 @@
+/* frontend/static/style.css */
+body { background:#f4f6f8; font-family:Inter, Arial, sans-serif; margin:0; padding:20px; }
+.container { max-width:760px; margin:0 auto; background:white; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+header h1 { margin:0; font-size:28px; }
+.sub { color:#666; margin:6px 0 12px 0; }
+
+.memory { background:#fbfbfe; padding:12px; border-radius:8px; margin-bottom:14px; border:1px solid #eef; }
+.mem { white-space:pre-wrap; font-family:monospace; color:#333; margin:0; }
+
+.chat-window { max-height:400px; overflow:auto; padding:12px; border-radius:8px; border:1px solid #eee; margin-bottom:12px; background:#fff; }
+.bubble { display:inline-block; padding:10px 14px; border-radius:14px; margin:8px 0; max-width:80%; }
+.user { background:#e8f0ff; margin-left:auto; color:#0b63d6; text-align:right; }
+.bot { background:#f3f4f6; margin-right:auto; color:#111; text-align:left; }
+
+.msg-form { display:flex; gap:8px; }
+.msg-form input { flex:1; padding:10px 12px; border-radius:10px; border:1px solid #ddd; }
+.msg-form button { padding:10px 14px; border-radius:10px; border:none; background:#1162d6; color:white; cursor:pointer; }
+
+.footer { margin-top:14px; color:#777; font-size:12px; text-align:center; }

@@ -1,0 +1,41 @@
+<!-- frontend/templates/chat.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>NOVA — Empathetic Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>NOVA</h1>
+      <p class="sub">Empathetic companion — remembers you over time</p>
+    </header>
+
+    <section class="memory">
+      <h3>Long-term memory</h3>
+      <pre class="mem">{{ memory or "— nothing saved yet —" }}</pre>
+    </section>
+
+    <section class="chat-window">
+      {% for row in chat %}
+        {% if row.role == 'user' %}
+          <div class="bubble user">{{ row.text }}</div>
+        {% else %}
+          <div class="bubble bot">{{ row.text }}</div>
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    <form method="POST" class="msg-form">
+      <input name="msg" placeholder="Write to NOVA..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+
+    <footer class="footer">
+      <small>Built per STAN internship brief. See spec: <code>/mnt/data/STAN Internship Challenge.pdf</code></small>
+    </footer>
+  </div>
+</body>
+</html>
